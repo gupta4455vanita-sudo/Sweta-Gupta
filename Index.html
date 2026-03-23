@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niyawa Luxury Salon - Premium Beauty & Grooming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23d4af37" width="1200" height="800"/><circle fill="%23f0e68c" cx="200" cy="200" r="150"/><circle fill="%23b8860b" cx="800" cy="300" r="100"/><path fill="%23ffd700" d="M400 500Q500 450 600 500Q700 550 800 500Q900 450 1000 500"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px #ffd700; }
+            to { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 20px #ffd700, 0 0 30px #ffd700; }
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #333;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,215,0,0.6);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #d4af37;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(212,175,55,0.3);
+        }
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .contact-item {
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .contact-item h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .phone-link {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .phone-link:hover {
+            color: #ffed4e;
+            transform: scale(1.05);
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .section-title { font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Niyawa Luxury Salon</h1>
+        <p>Where Elegance Meets Excellence - Premium Beauty Redefined</p>
+        <a href="#contact" class="cta-btn">Book Your Transformation</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Signature Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💇‍♂️</div>
+                    <h3>Premium Hair Styling</h3>
+                    <p>Expert cuts, coloring, and styling with international products for that celebrity look.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💅</div>
+                    <h3>Luxury Manicure & Pedicure</h3>
+                    <p>Organic treatments and nail art that pamper your hands and feet royally.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧔</div>
+                    <h3>Beard Grooming Mastery</h3>
+                    <p>Precision beard sculpting with premium oils for the perfect gentleman finish.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💆‍♀️</div>
+                    <h3>Facial Rejuvenation</h3>
+                    <p>Advanced skincare therapies using gold-infused masks and serums.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💇‍♀️</div>
+                    <h3>Bridal Makeover</h3>
+                    <p>Custom bridal packages that make you the star of your special day.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛁</div>
+                    <h3>Spa & Massage</h3>
+                    <p>Relaxing aromatherapy massages for complete body rejuvenation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Visit Us Today</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Contact</h3>
+                    <p><a href="tel:+917307213900" class="phone-link">+91 7307213900</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/917307213900" class="phone-link whatsapp-btn" target="_blank">Chat on WhatsApp</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Address</h3>
+                    <p>India, U.P.<br>Ayodhya<br>Niyawa Chauraha</p>
+                </div>
+                <div class="contact-item">
+                    <h3>✨ Our Promise</h3>
+                    <p>"Experience luxury you can feel, beauty you can see, and confidence that lasts."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Niyawa Luxury Salon. Elevating Beauty Standards in Ayodhya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
